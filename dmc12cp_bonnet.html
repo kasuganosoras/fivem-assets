@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv='X-UA-Compatible' content="IE=edge">
+		<meta name='viewport' content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+		<style>
+		.color {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			z-index: 1;
+			-webkit-animation: colorchange 4s linear 2s infinite alternate;
+			filter: invert(52%) sepia(93%) saturate(787%) hue-rotate(176deg) brightness(97%) contrast(86%);
+			opacity:0;
+		}
+		.color2 {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			z-index: 2;
+		}
+		@-webkit-keyframes colorchange {
+			0% {
+				opacity:0;
+			}
+			100% {
+				opacity:1;
+			}
+		}
+		/* filter: invert(52%) sepia(93%) saturate(787%) hue-rotate(176deg) brightness(97%) contrast(86%); */
+		</style>
+	</head>
+	<body>
+		<img src="https://i.zerodream.net/8a92902896988917ef2f324e98d22e3a.png" class="color" />
+		<img src="https://i.zerodream.net/94e77469c6bf10a77ee698c0723954c2.png" class="color2" />
+	</body>
+	<script>
+	</script>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>HUD科幻数据屏</title>
+<meta name="Description" content="HUD科幻数据屏，采用CSS3+ajax制作，可采用局部刷新来数据同步更新。画图太累，就用透明图片来做，分辨率采用的是1920X1080来制作，使用了一个视频作为全屏背景。"/>
+<meta name="Keywords" content="大数据屏幕,HUD科幻屏幕,科幻类数据显示器"/>
+<link href="css/style-rj.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body onLoad="sendRequest()" style="">
+
+	<!--<div class="videozz"></div>
+	<video  autoplay muted loop poster="media/fallba1ck.jpg">
+		<source src="http://www.kadai123.com/images/mov.mp4">
+		<source src="media/video.webm">
+		你的游览器不支持video支持
+	</video>-->
+
+<!--主-->
+<div class="box" style="background: none;">
+	<div class="box-a">
+    
+    
+    <div class="m-1">
+    </div>
+    
+    <!--中间主圈-->
+    <div class="m-2" style="display: none;">
+    </div>
+    <!--中间主圈-->
+    
+    <!--标题-->
+    <div class="m-3">
+      <div id="m-3-id-1">
+        <!--滚动区域-->
+        <p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p>D</p><p>A</p><p>T</p><p>A</p><p></p><p>S</p><p>T</p><p>A</p><p>T</p><p>I</p><p>S</p><p>T</p><p>I</p><p>C</p><p>S</p>
+        <!--滚动区域-->
+       </div>
+    </div>
+    <!--标题-->
+    
+    <!--声波1-->
+    <div class="m-4"></div>
+    <!--声波2-->
+    <div class="m-5"> 
+    <div id="m-5-id-1"> 
+    <div id="m-5-2"> 
+    <div id="m-5-id-2"> 
+    <a href="#"><img src="images/gif-2.png" border="0" /></a>
+    </div> 
+    <div id="m-5-id-3"></div> 
+    </div> 
+    </div> 
+    </div>
+    
+    <div class="m-10"></div>
+    
+    <!--字体翻转-->
+    <div class="m-6">
+      <div class="masked">
+          <h4>DMC-12 CyberPunk</h4>
+      </div>
+    </div>
+    
+    <!--小图片旋转-->
+    <div class="m-xz7"></div>
+    <div class="m-xz8 xzleft"></div>
+    <div class="m-xz9"></div>
+    <!--<div class="m-x10"></div>
+    <div class="m-x11"></div>
+    <div class="m-x12 xzleft"></div>
+    <div class="m-x13"></div>
+    <div class="m-x14 xzleft"></div>
+    <div class="m-x15"></div>
+    <div class="m-x16 xzleft"></div>
+    <div class="m-x17 xzleft"></div>
+    <div class="m-x18"></div>
+    <div class="m-x19 xzleft"></div>
+    <div class="m-x20"></div>-->
+    <!--小图片旋转-->
+    <div class="m-7">
+    	<div class="m-7-k">
+        	<div class="m-7xz1 xzleft"></div>
+            <div class="m-7xz2"></div>
+            <div class="m-7xz3 xzleft"></div>
+            <div class="m-7zt1">Turbo</div>
+            <div class="m-7zt2" id="sx1">2.768</div>
+    	</div>
+    </div>
+    
+    <div class="fbl">
+    ZeroDream FIVEM
+    </div>
+    
+    <div class="m-8"></div>
+    <div class="m-9"><div class="masked1" id="sx8">10.198.0.2</div></div>
+    
+    <div class="m-11">
+    	<div class="m-k-1"><div class="t1"></div></div>
+        <div class="m-k-2"><div class="t2"></div></div>
+        <div class="m-k-3"><div class="t3"></div></div>
+        <div class="m-k-4"><div class="t4"></div></div>
+        <div class="m-k-5"><div class="t5"></div></div>
+        <div class="m-k-6"><div class="t6"></div></div>
+        <div class="m-k-7"><div class="t7"></div></div>
+    </div>
+    
+    <div class="m-12">
+    <div class="m-12-k">
+    <div class="m-12xz1 xzleft"></div>
+    <div class="m-12xz2"></div>
+    <div class="m-12xz3 xzleft"></div>
+    <div class="m-12zt1">Temp</div>
+    <div class="m-12zt2" id="sx2">75.3</div>
+    </div>
+    </div>
+    
+    <div class="m-13"  id="screen1">
+    	<div class="" id="screen1_1">
+          <div><pre style="font: 18px/15px 'bankgothic_md_btmedium';width:100%;white-space: pre-line;">pam_unix(sshd:session): session opened for user shulker by (uid=0)
+Received disconnect from 123.244.108.93 port 41039:11: disconnected by user
+Disconnected from 123.244.108.93 port 41039
+pam_unix(sshd:session): session closed for user shulker
+Received disconnect from 123.244.108.93 port 44560:11: disconnected by user
+Disconnected from 123.244.108.93 port 44560
+pam_unix(sshd:session): session closed for user shulker
+pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=117.136.5.27  user=shulker
+Failed password for shulker from 117.136.5.27 port 64969 ssh2
+Accepted password for shulker from 117.136.5.27 port 64969 ssh2
+pam_unix(sshd:session): session opened for user shulker by (uid=0)
+pam_unix(sshd:session): session closed for user shulker
+Accepted password for shulker from 117.136.5.27 port 64970 ssh2
+pam_unix(sshd:session): session opened for user shulker by (uid=0)
+Received disconnect from 117.136.5.27 port 64970:11: disconnected by user
+Disconnected from 117.136.5.27 port 64970
+pam_unix(sshd:session): session closed for user shulker
+Accepted password for shulker from 212.64.64.246 port 10391 ssh2
+pam_unix(sshd:session): session opened for user shulker by (uid=0)
+Received disconnect from 212.64.64.246 port 10391:11: disconnected by user
+Disconnected from 212.64.64.246 port 10391
+pam_unix(sshd:session): session closed for user shulker
+Bad protocol version identification 'GET / HTTP/1.1' from 223.104.175.46 port 30730
+Bad protocol version identification 'GET / HTTP/1.1' from 223.104.175.46 port 30732
+Bad protocol version identification 'GET / HTTP/1.1' from 223.104.175.46 port 30731
+Bad protocol version identification 'GET / HTTP/1.1' from 223.104.175.46 port 30734
+Bad protocol version identification 'GET / HTTP/1.1' from 223.104.175.46 port 30733
+Bad protocol version identification 'GET / HTTP/1.1' from 223.104.175.46 port 30735
+Did not receive identification string from 223.104.175.46 port 30736
+Accepted password for root from 183.15.174.170 port 52789 ssh2
+pam_unix(sshd:session): session opened for user root by (uid=0)
+pam_unix(sshd:session): session closed for user root
+Accepted password for root from 183.15.174.170 port 53836 ssh2
+pam_unix(sshd:session): session opened for user root by (uid=0)
+pam_unix(sshd:session): session opened for user shulker by (uid=0)
+Received disconnect from 123.244.108.93 port 41039:11: disconnected by user
+Disconnected from 123.244.108.93 port 41039
+pam_unix(sshd:session): session closed for user shulker
+Received disconnect from 123.244.108.93 port 44560:11: disconnected by user
+Disconnected from 123.244.108.93 port 44560
+pam_unix(sshd:session): session closed for user shulker
+pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=117.136.5.27  user=shulker
+Failed password for shulker from 117.136.5.27 port 64969 ssh2
+Accepted password for shulker from 117.136.5.27 port 64969 ssh2
+pam_unix(sshd:session): session opened for user shulker by (uid=0)
+pam_unix(sshd:session): session closed for user shulker
+Accepted password for shulker from 117.136.5.27 port 64970 ssh2
+pam_unix(sshd:session): session opened for user shulker by (uid=0)
+Received disconnect from 117.136.5.27 port 64970:11: disconnected by user
+Disconnected from 117.136.5.27 port 64970
+pam_unix(sshd:session): session closed for user shulker
+Accepted password for shulker from 212.64.64.246 port 10391 ssh2
+pam_unix(sshd:session): session opened for user shulker by (uid=0)
+Received disconnect from 212.64.64.246 port 10391:11: disconnected by user
+Disconnected from 212.64.64.246 port 10391
+pam_unix(sshd:session): session closed for user shulker
+Bad protocol version identification 'GET / HTTP/1.1' from 223.104.175.46 port 30730
+Bad protocol version identification 'GET / HTTP/1.1' from 223.104.175.46 port 30732
+Bad protocol version identification 'GET / HTTP/1.1' from 223.104.175.46 port 30731
+Bad protocol version identification 'GET / HTTP/1.1' from 223.104.175.46 port 30734
+Bad protocol version identification 'GET / HTTP/1.1' from 223.104.175.46 port 30733
+Bad protocol version identification 'GET / HTTP/1.1' from 223.104.175.46 port 30735
+Did not receive identification string from 223.104.175.46 port 30736
+Accepted password for root from 183.15.174.170 port 52789 ssh2
+pam_unix(sshd:session): session opened for user root by (uid=0)
+pam_unix(sshd:session): session closed for user root
+Accepted password for root from 183.15.174.170 port 53836 ssh2
+pam_unix(sshd:session): session opened for user root by (uid=0)</pre></div>
+        </div>
+        <div id="screen1_2"></div>
+    </div>
+    
+    
+    <div class="m-14"><div class="ss"></div></div>
+    <!--地图-->
+    <!--<div class="m-15-b">--><div class="m-15-a" style="display: none;">
+    <div class="m-15-k">
+    	<div class="m-15xz1">
+        <!--<div class="m-15-dd1">--><div class="m-15-dd2"></div>
+        </div>
+    </div>
+    </div>
+    <!--地图-->
+    
+    <!--圈-->
+    <div class="m-16"></div>
+    <div class="m-17"></div>
+    <div class="m-18 xzleft"></div>
+    <div class="m-19"></div>
+    <div class="m-20 xzleft"></div>
+    <!--<div class="m-21"></div>
+    <div class="m-22"></div>
+    <div class="m-23 xzleft"></div>-->
+    <!--圈-->
+    
+    <!--时间-->
+    <div class="m-24" id="localtime"></div>
+    <!--时间-->
+    
+    <!--<div class="m-25">
+    <div class="m-25k">
+    	<div class="m-25xz1 m-25pic1"></div>
+        <div class="m-25zt1">全部订单</div>
+        <div class="m-25zt2" id="sx4">581</div>
+    </div>
+    </div>
+    
+    <div class="m-26">
+    <div class="m-25k">
+    	<div class="m-25xz1 m-25pic2"></div>
+        <div class="m-25zt1">未处理订单</div>
+        <div class="m-25zt2" id="sx5">8</div>
+    </div>
+    </div>
+    
+    <div class="m-27">
+    <div class="m-25k">
+    	<div class="m-25zt1">进行中订单</div>
+        <div class="m-25zt2" id="sx6">5</div>
+    	<div class="m-25xz1 m-25pic3"></div>
+        
+    </div>
+    </div>
+    
+    <div class="m-28">
+    <div class="m-25k">
+    	<div class="m-25zt1">成功订单</div>
+        <div class="m-25zt2" id="sx7">554</div>
+    	<div class="m-25xz1 m-25pic4"></div>
+    </div>
+    </div>-->
+    
+    <div class="m-29">
+    <div class="masked2" id="">ZeroDream</div>
+    </div>
+    
+    <div class="m-30">CyberPunk Delorean DMC-12 by Akkariin</div>
+    
+    
+    
+    </div>
+</div>
+<!--主-->
+
+<script src="js/common.min.js"></script>
+</body>
+</html>
